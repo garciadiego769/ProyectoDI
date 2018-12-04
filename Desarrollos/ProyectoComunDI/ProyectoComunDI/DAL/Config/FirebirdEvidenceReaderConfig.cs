@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProyectoComunDI.DAL.Config
 {
-	class FirebirdEvidenceReaderConfig
+	class FirebirdEvidenceReaderConfig : DBwithPortEvidenceReaderConfig
 	{
+		private FirebirdDialects dialect;
 	}
 }

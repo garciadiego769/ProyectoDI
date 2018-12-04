@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProyectoComunDI.DAL.Config
 {
-	abstract class DBwithPortEvidenceReaderConfig
+	abstract class DBwithPortEvidenceReaderConfig : SQLServerEvidenceReaderConfig
 	{
 		private int port;
+
 	}
 }

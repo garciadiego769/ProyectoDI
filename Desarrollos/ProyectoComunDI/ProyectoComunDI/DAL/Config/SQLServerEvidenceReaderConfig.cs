@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoComunDI.DAL.Config
 {
-	class SQLServerEvidenceReaderConfig
+	class SQLServerEvidenceReaderConfig : EvidenceReaderConfig
 	{
 
 		private String user;
