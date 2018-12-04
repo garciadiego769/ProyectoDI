@@ -9,9 +9,9 @@ namespace ProyectoComunDI.DAL.Config
 	class SQLServerEvidenceReaderConfig : EvidenceReaderConfig
 	{
 
-		private String user;
-		private String pass;
-		private String server;
-		private String database;
+		private string user;
+		private string pass;
+		private string server;
+		private string database;
 	}
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoComunDI.DAL.Config
 {
-	class GenericEvidenceReaderConfig : DBwithPortEvidenceReaderConfig
+	class GenericEvidenceReaderConfig : DBWithPortEvidenceReaderConfig
 	{
 		private DataBaseType dataBaseType;
 	}

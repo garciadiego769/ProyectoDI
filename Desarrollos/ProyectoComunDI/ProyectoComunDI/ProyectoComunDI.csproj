@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\Config\DataBaseType.cs" />
-    <Compile Include="DAL\Config\DBwithPortEvidenceReaderConfig.cs" />
+    <Compile Include="DAL\Config\DBWithPortEvidenceReaderConfig.cs" />
     <Compile Include="DAL\Config\EvidenceReaderConfig.cs" />
     <Compile Include="DAL\Config\FirebirdDialects.cs" />
     <Compile Include="DAL\Config\FirebirdEvidenceReaderConfig.cs" />
