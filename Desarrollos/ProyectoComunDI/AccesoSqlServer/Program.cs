@@ -13,6 +13,8 @@ namespace AccesoSqlServer
         static void Main(string[] args)
         {
 
+            
+        
             //Creo objeto tipo ConexionBd
             ConexionBd conexionBd = new ConexionBd();
 
@@ -20,6 +22,7 @@ namespace AccesoSqlServer
             {
                 //Abro conexion
                 conexionBd.abrirConexion();
+                Console.ReadKey();
                
             }
             catch (SqlException e)
@@ -27,8 +30,9 @@ namespace AccesoSqlServer
                 Console.WriteLine(e.ToString());
             }
 
-            
 
+            conexionBd.cerrarConexion();
+            Console.ReadKey();
         
 
 
