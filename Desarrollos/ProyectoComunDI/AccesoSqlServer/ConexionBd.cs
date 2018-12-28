@@ -10,9 +10,18 @@ namespace AccesoSqlServer
     class ConexionBd
     {
 
-        //Atributo de tipo SqlConecction para conectar al sevidor y a la BD
+        //Atributo de tipo SqlConecction 
+        //Conexion al servidor local
         private SqlConnection con = new SqlConnection("server=JOSE\\SERVIDOR" +
                 " ; database=Prueba ; integrated security = true");
+
+        /*
+        //Conexion remota a la base de datos de Azure
+        private SqlConnection con = new SqlConnection("Server=tcp:servidorazureprueba.database.windows.net,1433;" +
+            "Initial Catalog=PruebaAzure;Persist Security Info=False;" +
+            "User ID=Jose;Password=Ab1-12345;" +
+            "MultipleActiveResultSets=False;Encrypt=True;" +
+            "TrustServerCertificate=False;Connection Timeout=30");*/
 
         //Metodo para abrir la conexion
         public void abrirConexion()
