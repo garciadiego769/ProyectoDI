@@ -12,48 +12,77 @@ namespace AccesoSqlServer
 
         //Atributo de tipo SqlConecction 
         //Conexion al servidor local
-        private SqlConnection con = new SqlConnection("server=JOSE\\SERVIDOR" +
-                " ; database=Prueba ; integrated security = true");
+        /*private SqlConnection con = new SqlConnection("server=JOSE\\SERVIDOR" +
+                " ; database=Prueba ; integrated security = true");*/
 
-        /*
+
         //Conexion remota a la base de datos de Azure
-        private SqlConnection con = new SqlConnection("Server=tcp:servidorazureprueba.database.windows.net,1433;" +
-            "Initial Catalog=PruebaAzure;Persist Security Info=False;" +
-            "User ID=Jose;Password=Ab1-12345;" +
+        private SqlConnection conectiocSql = new SqlConnection("Server=tcp:servidorazureprueba.database.windows.net,1433;" +
+            "Initial Catalog=ProyectoDI;Persist Security Info=False;" +
+            "User ID=Jose;Password=Ab112345;" +
             "MultipleActiveResultSets=False;Encrypt=True;" +
-            "TrustServerCertificate=False;Connection Timeout=30");*/
+            "TrustServerCertificate=False;Connection Timeout=30");
 
-        //Metodo para abrir la conexion
+        #region constructor
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="con"></param>
+        public ConexionBd()
+        {
+
+        }
+
+        #endregion constructor
+
+        #region metodos
+        /// <summary>
+        /// Funcion que habre la conexion con la BD
+        /// </summary>
         public void abrirConexion()
         {
 
             try
             {
-                con.Open();
-                Console.WriteLine("Conexión realizada con éxito");
+
+                conectiocSql.Open();
+                Console.WriteLine("Conexion abierta");
+
+
             }
             catch (SqlException e)
             {
-                //Lanzo mensaje de excepcion
-                throw e;
+                Console.Write(e.Message);
             }
+
 
         }
 
-        //Metodo para cerrar la conexion
+        /// <summary>
+        /// Funcion que cierra la conexion con la BD
+        /// </summary>
         public void cerrarConexion()
         {
+
             try
             {
-                con.Close();
-                Console.WriteLine("Conexión cerrada con éxito");
+
+                conectiocSql.Close();
+                Console.WriteLine("Conexion cerrada");
+
+
             }
             catch (SqlException e)
             {
-                //Lanzo mensaje de excepcion
-                throw e;
+                Console.Write(e.Message);
             }
 
+
         }
+        #endregion metodos
+
+        public SqlConnection ConectiocSql { get => conectiocSql; set => conectiocSql = value; }
+
+
     }
 }
