@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace AccesoSqlServer
 {
-    class Program
+    class EvidenciaDal
     {
+
         
-        static void Main(string[] args)
-        {
+
+                
 
 
-
-            Consulta.porId(1);
+           
 
 
 
@@ -24,6 +24,11 @@ namespace AccesoSqlServer
             
 
 
+            
+              
+
+
+            
 
             
 
@@ -32,10 +37,7 @@ namespace AccesoSqlServer
 
 
 
-
-
-
-
-        }
+        
     }
+
 }

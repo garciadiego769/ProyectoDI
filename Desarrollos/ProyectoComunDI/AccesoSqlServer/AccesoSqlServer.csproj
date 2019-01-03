@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexionBd.cs" />
+    <Compile Include="Consulta.cs" />
+    <Compile Include="Evidencia.cs" />
+    <Compile Include="EvidenciaDal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
