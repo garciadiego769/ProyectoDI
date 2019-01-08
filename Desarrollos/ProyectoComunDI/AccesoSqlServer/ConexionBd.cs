@@ -12,16 +12,16 @@ namespace AccesoSqlServer
 
         //Atributo de tipo SqlConecction 
         //Conexion al servidor local
-        /*private SqlConnection con = new SqlConnection("server=JOSE\\SERVIDOR" +
-                " ; database=Prueba ; integrated security = true");*/
+        private SqlConnection con = new SqlConnection("server=JOSE\\SERVIDOR" +
+                " ; database=Prueba ; integrated security = true");
 
 
-        //Conexion remota a la base de datos de Azure
+        /*Conexion remota a la base de datos de Azure
         private SqlConnection conectiocSql = new SqlConnection("Server=tcp:servidorazureprueba.database.windows.net,1433;" +
             "Initial Catalog=ProyectoDI;Persist Security Info=False;" +
             "User ID=Jose;Password=Ab112345;" +
             "MultipleActiveResultSets=False;Encrypt=True;" +
-            "TrustServerCertificate=False;Connection Timeout=30");
+            "TrustServerCertificate=False;Connection Timeout=30");*/
 
         #region constructor
         /// <summary>
@@ -45,7 +45,7 @@ namespace AccesoSqlServer
             try
             {
 
-                conectiocSql.Open();
+                con.Open();
                 Console.WriteLine("Conexion abierta");
 
 
@@ -67,7 +67,7 @@ namespace AccesoSqlServer
             try
             {
 
-                conectiocSql.Close();
+                con.Close();
                 Console.WriteLine("Conexion cerrada");
 
 
@@ -81,7 +81,7 @@ namespace AccesoSqlServer
         }
         #endregion metodos
 
-        public SqlConnection ConectiocSql { get => conectiocSql; set => conectiocSql = value; }
+        public SqlConnection ConectiocSql { get => con; set => con = value; }
 
 
     }

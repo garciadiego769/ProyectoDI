@@ -14,8 +14,18 @@ namespace AccesoSqlServer
         {
 
 
+            Evidencia evidencia = Consulta.porIdDeTabla(149);
 
-            Consulta.porId(1);
+            Console.WriteLine("--------\n\n\n------");
+            Console.WriteLine(evidencia.Clase);
+
+            Console.ReadKey();
+
+            //Consulta.consultaTodaLaTabla();
+
+
+            
+
 
 
 
