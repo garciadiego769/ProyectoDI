@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1B7F2462-842D-4B19-A010-3FFE42F34580}</ProjectGuid>
+    <ProjectGuid>{BD5024DD-9321-4D07-8EBE-513735CF9638}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ProyectoComunDI</RootNamespace>
-    <AssemblyName>ProyectoComunDI</AssemblyName>
+    <RootNamespace>AccesoOracle</RootNamespace>
+    <AssemblyName>AccesoOracle</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
