@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1B7F2462-842D-4B19-A010-3FFE42F34580}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ProyectoComunDI</RootNamespace>
-    <AssemblyName>ProyectoComunDI</AssemblyName>
+    <ProjectGuid>{16834FCB-BAE0-4F3D-B4FB-25072ABCD029}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Utilidades</RootNamespace>
+    <AssemblyName>Utilidades</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,25 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\Config\DataBaseType.cs" />
-    <Compile Include="DAL\Config\DBWithPortEvidenceReaderConfig.cs" />
-    <Compile Include="DAL\Config\EvidenceReaderConfig.cs" />
-    <Compile Include="DAL\Config\FirebirdDialects.cs" />
-    <Compile Include="DAL\Config\FirebirdEvidenceReaderConfig.cs" />
-    <Compile Include="DAL\Config\GenericEvidenceReaderConfig.cs" />
-    <Compile Include="DAL\Config\LocaleConfig.cs" />
-    <Compile Include="DAL\Config\SQLServerEvidenceReaderConfig.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="IRIS\Iris.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\..\..\source\repos\AccesoCSV\AccesoCSV.csproj">
-      <Project>{7726F828-12A9-48D0-BBC4-4A1B56AD9114}</Project>
-      <Name>AccesoCSV</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ficheros", "Ficheros", "{32
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoCSV", "..\..\..\..\..\..\..\source\repos\AccesoCSV\AccesoCSV.csproj", "{7726F828-12A9-48D0-BBC4-4A1B56AD9114}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilidades", "Utilidades", "{05863F42-364A-47C9-AB07-9A5BAA0F152B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilidades", "Utilidades\Utilidades.csproj", "{16834FCB-BAE0-4F3D-B4FB-25072ABCD029}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,10 @@ Global
 		{7726F828-12A9-48D0-BBC4-4A1B56AD9114}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7726F828-12A9-48D0-BBC4-4A1B56AD9114}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7726F828-12A9-48D0-BBC4-4A1B56AD9114}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16834FCB-BAE0-4F3D-B4FB-25072ABCD029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16834FCB-BAE0-4F3D-B4FB-25072ABCD029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16834FCB-BAE0-4F3D-B4FB-25072ABCD029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16834FCB-BAE0-4F3D-B4FB-25072ABCD029}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,6 +43,7 @@ Global
 		{C262E2F2-8F2E-4199-807C-100DE88A8C5D} = {7B90780E-DAF5-4B73-9A39-AC1216CD2E72}
 		{32249D37-B14C-40FD-9CCA-3ACF99916F93} = {7B90780E-DAF5-4B73-9A39-AC1216CD2E72}
 		{7726F828-12A9-48D0-BBC4-4A1B56AD9114} = {32249D37-B14C-40FD-9CCA-3ACF99916F93}
+		{16834FCB-BAE0-4F3D-B4FB-25072ABCD029} = {05863F42-364A-47C9-AB07-9A5BAA0F152B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B32C9207-346B-4653-B2C4-348AC028B1E8}
