@@ -15,10 +15,15 @@ namespace ProyectoComunDI
 			test.downloadFile();
             Console.WriteLine("Hola Mundo");
 
-            #region Acceso MySQL
+			#region Acceso MySQL
 
-            #endregion
-            #region AccesoCSV
+			#endregion
+			#region AccesoCSV
+			AccesoCSV.Acceso ac = new AccesoCSV.Acceso();
+
+			ac.downloadFile();
+			ac.cargarArchivoData();
+			ac.crearArchivoCSV();
 
 			#endregion
 
