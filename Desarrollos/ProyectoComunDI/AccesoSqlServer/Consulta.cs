@@ -5,89 +5,55 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Utilidades;
 
 namespace AccesoSqlServer
 {
-    class Consulta
+    /// <summary>
+    /// Clase Consulta que se encarga de hacer una SELECT en la BD
+    /// </summary>
+    public static class Consulta
     {
-
-        public static List<Evidencia> consultaTodaLaTabla() {
-
-            List<Evidencia> evidencias = new List<Evidencia>(); 
-
-            ConexionBd bd = new ConexionBd();
-
-            SqlCommand command = new SqlCommand("SELECT * FROM dbo.AtributosFlores", bd.ConectiocSql);
-
-            bd.abrirConexion();
-            SqlDataReader rdr = command.ExecuteReader();
-
-            if (rdr.HasRows)
-            {
-                while (rdr.Read())
-                {
-
-                    int numeroEvidencia = Convert.ToInt32(rdr["numero_evidencia"].ToString());
-                    double longitud_petalo = Convert.ToDouble(rdr["longitud_petalo"]);
-                    double longitud_sepalo = Convert.ToDouble(rdr["longitud_sepalo"].ToString());
-                    double ancho_petalo = Convert.ToDouble(rdr["ancho_petalo"].ToString());
-                    double ancho_sepalo = Convert.ToDouble(rdr["ancho_sepalo"].ToString());
-                    string clase = rdr["clase"].ToString();
-
-                    Evidencia evidencia = new Evidencia(numeroEvidencia, longitud_petalo, longitud_sepalo, ancho_petalo,
-                        ancho_sepalo, clase);
-
-                    evidencias.Add(evidencia);
-
-
-
-                    Console.WriteLine(numeroEvidencia + "--" + longitud_petalo + "--" + longitud_sepalo + "--"
-                                    + ancho_petalo + "--" + ancho_sepalo + "--" + clase);
-                }
-            }
-
-            else
-            {
-             Console.WriteLine("No rows found.");
-            }
-            rdr.Close();
-            bd.cerrarConexion();
-            Console.ReadKey();
-
-            return evidencias;
-
-        }
-
-        public static Evidencia porIdDeTabla(int id)
+        /// <summary>
+        /// Metodo que devuelve una lista de objetos Evidencia
+        /// </summary>
+        /// <returns></returns>
+        public static List<Evidencia> ConsultaTodaLaTabla()
         {
 
+            //Creo una lista de tipo Evidencia
             List<Evidencia> evidencias = new List<Evidencia>();
-            Evidencia e = null;
 
+            //Genero objeto ConexionBd
             ConexionBd bd = new ConexionBd();
 
+            //Preparo la consulta
             SqlCommand command = new SqlCommand("SELECT * FROM dbo.AtributosFlores", bd.ConectiocSql);
 
+            //Abro conexion
             bd.abrirConexion();
+
+            //Preparo el reader
             SqlDataReader rdr = command.ExecuteReader();
 
+            //Procedo a leer
             if (rdr.HasRows)
             {
                 while (rdr.Read())
                 {
 
-                    int numeroEvidencia = Convert.ToInt32(rdr["numero_evidencia"].ToString());
                     double longitud_petalo = Convert.ToDouble(rdr["longitud_petalo"]);
                     double longitud_sepalo = Convert.ToDouble(rdr["longitud_sepalo"].ToString());
                     double ancho_petalo = Convert.ToDouble(rdr["ancho_petalo"].ToString());
                     double ancho_sepalo = Convert.ToDouble(rdr["ancho_sepalo"].ToString());
                     string clase = rdr["clase"].ToString();
 
-                    Evidencia evidencia = new Evidencia(numeroEvidencia, longitud_petalo, longitud_sepalo, ancho_petalo,
+                    Evidencia evidencia = new Evidencia(longitud_petalo, longitud_sepalo, ancho_petalo,
                         ancho_sepalo, clase);
 
                     evidencias.Add(evidencia);
 
+                    
                 }
             }
 
@@ -96,84 +62,15 @@ namespace AccesoSqlServer
                 Console.WriteLine("No rows found.");
             }
             rdr.Close();
-            
             bd.cerrarConexion();
-            Console.ReadKey();
+            return evidencias;
 
-            e = evidencias[id];
-
-            return e;
-
-
-
-
-         
-        }
-
-
-
-        public static Evidencia porId(int id)
-        {
-
-            Evidencia evidencia = null;
-            
-
-            ConexionBd bd = new ConexionBd();
-
-            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM dbo.AtributosFlores WHERE " +
-                "numero_evidencia ="+id+""),bd.ConectiocSql);
-
-            bd.abrirConexion();
-            
-
-            SqlDataReader rdr = command.ExecuteReader();
-
-
-
-            
-                while (rdr.Read())
-                {
-
-                    int numeroEvidencia = Convert.ToInt32(rdr["numero_evidencia"].ToString());
-                    double longitud_petalo = Convert.ToDouble(rdr["longitud_petalo"]);
-                    double longitud_sepalo = Convert.ToDouble(rdr["longitud_sepalo"].ToString());
-                    double ancho_petalo = Convert.ToDouble(rdr["ancho_petalo"].ToString());
-                    double ancho_sepalo = Convert.ToDouble(rdr["ancho_sepalo"].ToString());
-                    string clase = rdr["clase"].ToString();
-
-                    evidencia = new Evidencia(numeroEvidencia, longitud_petalo, longitud_sepalo, ancho_petalo,
-                        ancho_sepalo, clase);
-
-                    
-
-
-
-                   
-                }
-            
-
-            
-            rdr.Close();
-            Console.ReadKey();
-            bd.cerrarConexion();
-            return evidencia;
 
         }
-
-        private static void ReadSingleRow(IDataRecord record)
-        {
-           
-
-
-            Console.WriteLine(String.Format("{0}, {1}, {2}, {3}, {4}, {5}", record[0], record[1], record[2], record[3], record[4], record[5
-]));
-        }
-
 
     }
 }
 
-      
 
 
 
@@ -183,5 +80,6 @@ namespace AccesoSqlServer
 
 
 
-          
+
+
 
