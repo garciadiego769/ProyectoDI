@@ -25,7 +25,7 @@ namespace ProyectoComunDI
             //La cadena de conexión con el nombre de usuario, contraseña y BD
             con.ConnectionString = "User Id=<SYSTEM>;Password=<12345Abcde>;Data Source=<DANIDIEGO>";
             con.Open();
-            Console.WriteLine("Conexión realziada con Oracle" + con.ServerVersion); //muestra la versión
+            Console.WriteLine("Conexión realzada con Oracle" + con.ServerVersion); //muestra la versión
             #endregion
 
 
