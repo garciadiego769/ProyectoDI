@@ -26,7 +26,8 @@ namespace ProyectoComunDI
 
             OracleConnection con = new OracleConnection(oradb);
             con.Open();
-            Console.WriteLine("Conexión realziada con Oracle" + con.ServerVersion);
+            Console.WriteLine("Conexión realzada con Oracle" + con.ServerVersion); //muestra la versión
+            #endregion
 
             Console.Read(); */
 
