@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1B7F2462-842D-4B19-A010-3FFE42F34580}</ProjectGuid>
+    <ProjectGuid>{2C0D7700-E5F6-4677-A965-80AF100CE81A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ProyectoComunDI</RootNamespace>
-    <AssemblyName>ProyectoComunDI</AssemblyName>
+    <RootNamespace>AccesoSqlServer</RootNamespace>
+    <AssemblyName>AccesoSqlServer</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConexionBd.cs" />
+    <Compile Include="Consulta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -50,10 +52,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AccesoSqlServer\AccesoBDSQLServer.csproj">
-      <Project>{2c0d7700-e5f6-4677-a965-80af100ce81a}</Project>
-      <Name>AccesoBDSQLServer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Utilidades\Utilidades.csproj">
       <Project>{d575bc20-1271-43c4-a7f1-3ebd1387ca20}</Project>
       <Name>Utilidades</Name>
