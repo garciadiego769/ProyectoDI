@@ -43,19 +43,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\Config\DataBaseType.cs" />
-    <Compile Include="DAL\Config\DBWithPortEvidenceReaderConfig.cs" />
-    <Compile Include="DAL\Config\EvidenceReaderConfig.cs" />
-    <Compile Include="DAL\Config\FirebirdDialects.cs" />
-    <Compile Include="DAL\Config\FirebirdEvidenceReaderConfig.cs" />
-    <Compile Include="DAL\Config\GenericEvidenceReaderConfig.cs" />
-    <Compile Include="DAL\Config\LocaleConfig.cs" />
-    <Compile Include="DAL\Config\SQLServerEvidenceReaderConfig.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoBDMySql\AccesoBDMySql.csproj">
+      <Project>{a174b0b3-bd2e-4b44-b933-5d1c52bcb84b}</Project>
+      <Name>AccesoBDMySql</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoSqlServer\AccesoBDSQLServer.csproj">
+      <Project>{2c0d7700-e5f6-4677-a965-80af100ce81a}</Project>
+      <Name>AccesoBDSQLServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilidades\Utilidades.csproj">
+      <Project>{d575bc20-1271-43c4-a7f1-3ebd1387ca20}</Project>
+      <Name>Utilidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AccesoCSV\AccesoCSV.csproj">
