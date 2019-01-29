@@ -57,5 +57,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoBDMySql\AccesoBDMySql.csproj">
+      <Project>{a174b0b3-bd2e-4b44-b933-5d1c52bcb84b}</Project>
+      <Name>AccesoBDMySql</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

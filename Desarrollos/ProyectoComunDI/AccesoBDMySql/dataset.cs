@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace AccesoBDMySql
 {
-    static class dataset
+    public static class Dataset
     {
 
         private static MySqlConnection conectar(string host, string port, string user, string pass, string database)
@@ -55,7 +55,7 @@ namespace AccesoBDMySql
                     }
                 }
 
-                Console.ReadKey();
+                //Console.ReadKey();
 
                 // Cerrar la conexión
                 conn.Close();

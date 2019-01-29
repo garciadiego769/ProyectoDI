@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AccesoBDMySql;
 
 namespace ProyectoComunDI
 {
@@ -10,20 +11,28 @@ namespace ProyectoComunDI
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hola Mundo");
+            Console.WriteLine("Largo de sepalo,ancho de sepalo,largo de petalo,ancho de petalo,especie");
+           
+            List<string[]> dataseti = new List<string[]>();
+            dataseti = Dataset.cargarDatos("127.0.0.1", "3306", "root", "", "dataset");
 
+            foreach (string[] row in dataseti)
+            {
+                Console.WriteLine(row[0] + " " + row[1] + " " + row[2] + " " + row[3] + " " + row[4]);
+            }
+            Console.ReadKey();
             #region Acceso MySQL
 
             #endregion
             #region AccesoCSV
 
-			#endregion
+            #endregion
 
-			#region Configurador
+            #region Configurador
 
-			// aquí se instancian las clases necesarias para conectarse a cada base de datos.
-			#endregion
+            // aquí se instancian las clases necesarias para conectarse a cada base de datos.
+            #endregion
 
-		}
+        }
 	}
 }

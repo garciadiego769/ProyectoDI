@@ -13,7 +13,7 @@ namespace AccesoBDMySql
         {
 
             List<string[]> dataseti = new List<string[]>();
-            dataseti = dataset.cargarDatos("127.0.0.1", "3306", "root","", "dataset");
+            dataseti = Dataset.cargarDatos("127.0.0.1", "3306", "root","", "dataset");
 
             foreach(string[] row in dataseti)
             {
