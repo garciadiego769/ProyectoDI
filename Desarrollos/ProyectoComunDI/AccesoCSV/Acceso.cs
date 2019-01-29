@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
+using Microsoft.VisualBasic;
 
 namespace AccesoCSV
 {
@@ -59,6 +60,7 @@ namespace AccesoCSV
 			
 		}
 
+		//crea el archivo .csv y lo carga con los datos extraidos del dataset
 		public void crearArchivoCSV()
 		{
 
@@ -72,6 +74,25 @@ namespace AccesoCSV
 			}
 			File.WriteAllText(filePath, sb.ToString());
 
+		}
+
+		public void crearEvidencias()
+		{
+			var reader = new StreamReader(File.OpenRead(FILE_NAME));
+
+			while (!reader.EndOfStream)
+			{
+				var line = reader.ReadLine();
+				var values = line.Split(',');
+
+				sepal_lenght = Double.Parse(values[0]);
+				sepal_width = Double.Parse(values[1]);
+				petal_lenght = Double.Parse(values[2]);
+				petal_width = Double.Parse(values[3]);
+				irisclass = values[4].ToString();
+
+				//instancia de evidencia
+			}
 		}
 	}
 }
