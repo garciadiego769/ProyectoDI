@@ -48,7 +48,7 @@ namespace AccesoBDMySql
                     {
                         // En nuestra base de datos, el array contiene:  ID 0, FIRST_NAME 1,LAST_NAME 2, ADDRESS 3
                         // Hacer algo con cada fila obtenida
-                        string[] row = { reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4) };
+                        string[] row = { reader.GetString(2), reader.GetString(0), reader.GetString(3), reader.GetString(1), reader.GetString(4) };
                         dataset.Add(row);
 
 

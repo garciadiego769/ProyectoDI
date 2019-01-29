@@ -11,18 +11,10 @@ namespace ProyectoComunDI
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Largo de sepalo,ancho de sepalo,largo de petalo,ancho de petalo,especie");
            
+            #region Acceso MySQL
             List<string[]> dataseti = new List<string[]>();
             dataseti = Dataset.cargarDatos("127.0.0.1", "3306", "root", "", "dataset");
-
-            foreach (string[] row in dataseti)
-            {
-                Console.WriteLine(row[0] + " " + row[1] + " " + row[2] + " " + row[3] + " " + row[4]);
-            }
-            Console.ReadKey();
-            #region Acceso MySQL
-
             #endregion
             #region AccesoCSV
 
@@ -32,7 +24,7 @@ namespace ProyectoComunDI
 
             // aquí se instancian las clases necesarias para conectarse a cada base de datos.
             #endregion
-
+            
         }
-	}
+    }
 }
