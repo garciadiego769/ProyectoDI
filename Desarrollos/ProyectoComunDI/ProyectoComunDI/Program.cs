@@ -5,30 +5,32 @@ using System.Text;
 using System.Threading.Tasks;
 using Oracle.DataAccess.Client;
 
+
 namespace ProyectoComunDI
 {
     class Program
     {
+        //private const string V = "User Id=SYSTEM;Password=12345Abcde;";
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hola Mundo");
-
-            #region Acceso MySQL
-
-            // cread una region cada uno con un ejemplo de como se accedea vuestra libreria
-
-            #endregion
-
             #region Acceso Oracle
-            OracleConnection con;
-            con = new OracleConnection();
-            //La cadena de conexión con el nombre de usuario, contraseña y BD
-            con.ConnectionString = "User Id=<SYSTEM>;Password=<12345Abcde>;Data Source=<DANIDIEGO>";
+
+            
+
+
+            /* string oradb = "Data Source=(DESCRIPTION="
+             + "(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=a224p07.arriagainfo.local)(PORT=1521)))"
+             + "(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=XE)));"
+             + V;
+
+            OracleConnection con = new OracleConnection(oradb);
             con.Open();
-            Console.WriteLine("Conexión realziada con Oracle" + con.ServerVersion); //muestra la versión
+            Console.WriteLine("Conexión realziada con Oracle" + con.ServerVersion);
+
+            Console.Read(); */
+
             #endregion
-
-
 
         }
     }
