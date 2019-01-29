@@ -16,8 +16,6 @@ namespace ProyectoComunDI
         static void Main(string[] args)
         {
 			Acceso test = new Acceso();
-			test.downloadFile();
-            Console.WriteLine("Hola Mundo");
            
 
 			#region Acceso MySQL
@@ -37,7 +35,6 @@ namespace ProyectoComunDI
 			ac.cargarArchivoData();
 			ac.crearArchivoCSV();
 
-			#endregion
             #endregion
             #region Aceso SQLServer
             //Lista de evidencias            
@@ -61,6 +58,4 @@ namespace ProyectoComunDI
     }
             #endregion
 
-        }
-    }
 }
