@@ -83,11 +83,5 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AccesoOracle\AccesoOracle.csproj">
-      <Project>{bd5024dd-9321-4d07-8ebe-513735cf9638}</Project>
-      <Name>AccesoOracle</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
