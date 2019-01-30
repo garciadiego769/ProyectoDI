@@ -6,33 +6,31 @@ using System.Threading.Tasks;
 using System.Net;
 using System.IO;
 using Microsoft.VisualBasic;
+using Utilidades;
 
 namespace AccesoCSV
 {
     public class Acceso
     {
-		private const string FILE_NAME = "C:\\Users\\Anselmo\\Desktop\\iris.data"; //esta ruta debería servir para cualquier ordenador -> modificar!
+		private const string FILE_NAME = "C:\\iris.data";
 
 		//variables para almacenar datos flor
-		private double sepal_lenght;
-		private double sepal_width;
-		private double petal_lenght;
-		private double petal_width;
-		private string irisclass;
+		private static double sepal_lenght;
+		private static double sepal_width;
+		private static double petal_lenght;
+		private static double petal_width;
+		private static string irisclass;
 
-		//cantidad de campos por cada fila de datos en el dataset
-		private int numCamposEntradaDataSet = 5; //-> número campos de cada fila en el dataset de IRIS
+		private static string[] filas;
 
-		private string[] filas;
-
-		public void downloadFile()
+		public static void downloadFile()
 		{
 			var url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data";
 			WebClient cln = new WebClient();
 			cln.DownloadFile(url, FILE_NAME); 
 		}
 
-		public void cargarArchivoData() //lee y almacena los datos del archivo .data
+		public static void cargarArchivoData() //lee y almacena los datos del archivo .data
 		{
 			if (File.Exists(FILE_NAME)) //Comprobaciones ayuda depuración
 			{
@@ -61,10 +59,9 @@ namespace AccesoCSV
 		}
 
 		//crea el archivo .csv y lo carga con los datos extraidos del dataset
-		public void crearArchivoCSV()
+		public static void crearArchivoCSV()
 		{
-
-			string filePath = "C:\\Users\\Anselmo\\Desktop\\IRIS.csv";
+			string filePath = "C:\\IRIS.csv";
 
 			StringBuilder sb = new StringBuilder();
 
@@ -76,9 +73,11 @@ namespace AccesoCSV
 
 		}
 
-		public void crearEvidencias()
+		//carga los datos del dataset en una lista de evidencias
+		public static List<Evidencia> cargarEvidencias()
 		{
 			var reader = new StreamReader(File.OpenRead(FILE_NAME));
+			List<Evidencia> evidencias = new List<Evidencia>();
 
 			while (!reader.EndOfStream)
 			{
@@ -92,7 +91,11 @@ namespace AccesoCSV
 				irisclass = values[4].ToString();
 
 				//instancia de evidencia
+				Evidencia evidencia = new Evidencia(petal_lenght, sepal_lenght, petal_width, sepal_width, irisclass);
+				evidencias.Add(evidencia);
 			}
+
+			return evidencias;
 		}
 	}
 }
