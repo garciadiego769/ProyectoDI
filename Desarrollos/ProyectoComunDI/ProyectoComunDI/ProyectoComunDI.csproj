@@ -65,5 +65,11 @@
       <Name>Utilidades</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoCSV\AccesoCSV.csproj">
+      <Project>{7726F828-12A9-48D0-BBC4-4A1B56AD9114}</Project>
+      <Name>AccesoCSV</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
