@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9E7B4C2F-C6E0-4AB7-B2E7-9A4D6352ECA0}</ProjectGuid>
+    <ProjectGuid>{2C0D7700-E5F6-4677-A965-80AF100CE81A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AccesoFirebird</RootNamespace>
-    <AssemblyName>AccesoFirebird</AssemblyName>
+    <RootNamespace>AccesoSqlServer</RootNamespace>
+    <AssemblyName>AccesoSqlServer</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConexionBd.cs" />
+    <Compile Include="Consulta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utilidades\Utilidades.csproj">
+      <Project>{d575bc20-1271-43c4-a7f1-3ebd1387ca20}</Project>
+      <Name>Utilidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
