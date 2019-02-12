@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoBDSQLServer", "Acceso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilidades", "Utilidades\Utilidades.csproj", "{D575BC20-1271-43C4-A7F1-3EBD1387CA20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoOracle", "AccesoOracle\AccesoOracle.csproj", "{BD5024DD-9321-4D07-8EBE-513735CF9638}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D575BC20-1271-43C4-A7F1-3EBD1387CA20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D575BC20-1271-43C4-A7F1-3EBD1387CA20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D575BC20-1271-43C4-A7F1-3EBD1387CA20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD5024DD-9321-4D07-8EBE-513735CF9638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD5024DD-9321-4D07-8EBE-513735CF9638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD5024DD-9321-4D07-8EBE-513735CF9638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD5024DD-9321-4D07-8EBE-513735CF9638}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
