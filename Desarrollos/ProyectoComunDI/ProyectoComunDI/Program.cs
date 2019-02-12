@@ -35,8 +35,8 @@ namespace ProyectoComunDI
             #endregion
 
             #region Acceso Oracle
-            
-             AccesoOracle.ConsultaDatos.AccesoBDOracle();
+            /*
+             AccesoOracle.ConsultaDatos.AccesoBDOracle();*/
              
             #endregion
 
