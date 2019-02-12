@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using AccesoBDMySql;
 using Utilidades;
 using AccesoCSV;
+using AccesoOracle;
+
 
 
 
@@ -26,17 +28,23 @@ namespace ProyectoComunDI
 
 			#region AccesoCSV
 			List<Evidencia> iris = new List<Evidencia>();
-
+                       
 			AccesoCSV.Acceso.downloadFile();
 			AccesoCSV.Acceso.cargarArchivoData();
 			AccesoCSV.Acceso.crearArchivoCSV();
 			iris = AccesoCSV.Acceso.cargarEvidencias(); //iris -> lista con evidencias cargadas
 
-			#endregion
+            #endregion
 
-			#region Aceso SQLServer
-			//Lista de evidencias            
-			List<Evidencia> evidencias = Consulta.ConsultaTodaLaTabla();
+            #region Acceso Oracle
+            
+             AccesoOracle.ConsultaDatos.AccesoBDOracle();
+             
+            #endregion
+
+            #region Aceso SQLServer
+            //Lista de evidencias            
+            List<Evidencia> evidencias = Consulta.ConsultaTodaLaTabla();
 			#endregion
 
 			#region Configurador
