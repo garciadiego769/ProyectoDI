@@ -38,6 +38,24 @@ namespace ProyectoComunDI
 
             #endregion
 
+            #region Acceso Firebird
+
+           /* Console.WriteLine("Escribe la ruta de la base de datos: ");
+            string nombreBD = Console.ReadLine();
+
+            Console.WriteLine("Escribe el usuario: ");
+            string user = Console.ReadLine();
+
+            Console.WriteLine("Escribe la contraseña: ");
+            string password = Console.ReadLine();
+
+            ConexionBDFirebird conexion = new ConexionBDFirebird();
+            conexion.AbrirConexionBDFirebird(nombreBD, user, password);*/
+
+
+            #endregion
+
+
         }
     }
 }
