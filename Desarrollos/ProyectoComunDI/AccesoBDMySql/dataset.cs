@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-
+using Utilidades;
 
 namespace AccesoBDMySql
 {
@@ -20,7 +20,12 @@ namespace AccesoBDMySql
             return conexion;
         }
 
-        public static List<string[]> cargarDatos(string host, string port, string user, string pass, string database)
+        public static List<Evidencia> cargardatos(string v1, string v2, string v3, string v4, string v5)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static List<Evidencia> cargarDatos(string host, string port, string user, string pass, string database)
         {
 
             try
@@ -39,7 +44,7 @@ namespace AccesoBDMySql
                 reader = sentencia.ExecuteReader();
 
                 //Si la consulta devuelve datos ejecutar el codigo, si no alertar de que no devuelve
-                List<string[]> dataset = new List<string[]>();
+                List<Evidencia> dataset = new List<Evidencia>();
 
                 if (reader.HasRows)
                 {
@@ -48,8 +53,9 @@ namespace AccesoBDMySql
                     {
                         // En nuestra base de datos, el array contiene:  ID 0, FIRST_NAME 1,LAST_NAME 2, ADDRESS 3
                         // Hacer algo con cada fila obtenida
-                        string[] row = { reader.GetString(2), reader.GetString(0), reader.GetString(3), reader.GetString(1), reader.GetString(4) };
-                        dataset.Add(row);
+                        Evidencia evi= new Evidencia(double.Parse(reader.GetString(2)), double.Parse(reader.GetString(0)), double.Parse(reader.GetString(3)), double.Parse(reader.GetString(1)), reader.GetString(4));
+                       
+                        dataset.Add(evi);
 
 
                     }
